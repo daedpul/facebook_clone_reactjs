@@ -1,6 +1,6 @@
 import React from "react";
-
-function Greet(){
+import "./bullet.css"
+function Greet() {
     return (
         <h1>
             Hello
@@ -8,10 +8,20 @@ function Greet(){
     );
 }
 
-function Name(){
+function Name() {
     return (
         <h2> Dave</h2>
     );
 }
 
-export {Greet, Name};
+function NavBar() {
+    return (
+        <div class="navbar">
+            <ul>
+                <li>About me </li>
+                <li>Contact me </li>
+            </ul>
+        </div>);
+}
+
+export { NavBar, Greet, Name };
