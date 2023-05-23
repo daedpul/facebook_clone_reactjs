@@ -1,11 +1,9 @@
-import { Greet, Name, NavBar } from "./page/LandingPage/components/LandingPage";
+import Scaffold from "./page/LandingPage/Scaffold";
 
 function App() {
   return (
     <div >
-      <NavBar/>
-      {/* <Name/> */}
-      
+      <Scaffold/>
     </div>
   );
 }

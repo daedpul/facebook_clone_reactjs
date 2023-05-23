@@ -1,27 +1,23 @@
 import React from "react";
-import "./bullet.css"
-function Greet() {
-    return (
-        <h1>
-            Hello
-        </h1>
-    );
-}
-
-function Name() {
-    return (
-        <h2> Dave</h2>
-    );
-}
+import "./navbar_content.css";
+import "./body_content.css";
 
 function NavBar() {
     return (
-        <div class="navbar">
+        <div class="navbar" >
             <ul>
-                <li>About me </li>
-                <li>Contact me </li>
+                <li>About us </li>
+                <li>Contact us </li>
             </ul>
         </div>);
 }
 
-export { NavBar, Greet, Name };
+function LandingPageBody() {
+    return (
+        <div id = "container">
+            <input placeholder="Meeting ID"/>
+            <input placeholder="User"/>
+        </div>);
+}
+
+export { NavBar,LandingPageBody};

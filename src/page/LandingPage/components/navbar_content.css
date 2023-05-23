@@ -1,0 +1,22 @@
+ul {
+  list-style-type: none;
+  margin: 10;
+  padding: 10;
+  justify-self: auto;
+  overflow: hidden;
+  height: 50px;
+  color: white;
+}
+
+li {
+  float: right;
+  margin: 10px;
+  align-items: center;
+}
+
+.navbar {
+  height: 50px;
+  width: 100%;
+
+  background-color: red;
+}
