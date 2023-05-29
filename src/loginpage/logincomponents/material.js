@@ -13,11 +13,10 @@ export function LoginCard() {
             // boxShadow:''8b9dc3
         }}>
             <label style={{
-                // justifyContent:"center"
+                justifyContent:"center",
                 display:"flex",
-                alignContent: "center",
-                margin: "10px",
-                backgroundColor:"blue"
+                margin: "20px",
+                // backgroundColor:"blue"
             }}>Log Into Facebook</label>
             <Username/>
         </div>);
