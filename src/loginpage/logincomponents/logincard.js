@@ -1,6 +1,7 @@
 import React from "react";
-import {Username} from "./logincomponents.js"
-export function LoginCard() {
+import {Username, Password} from "./logincomponents.js"
+import LoginButton from "./loginbutton.js"
+function LoginCard() {
     return (
         <div style={{
             height: "300px",
@@ -10,7 +11,6 @@ export function LoginCard() {
             borderStyle: "solid",
             borderColor: "#dfe3ee",
             boxShadow: "0px 0px 20px 4px #dfe3ee"
-            // boxShadow:''8b9dc3
         }}>
             <label style={{
                 justifyContent:"center",
@@ -19,5 +19,9 @@ export function LoginCard() {
                 // backgroundColor:"blue"
             }}>Log Into Facebook</label>
             <Username/>
+            <Password/>
+            <LoginButton/>
         </div>);
 }
+
+export default LoginCard;

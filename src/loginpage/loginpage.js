@@ -1,5 +1,5 @@
 import React from "react";
-import { LoginCard } from "./logincomponents/material"
+import LoginCard from "./logincomponents/logincard"
 import Logo from "../resource/fb_logo.svg";
 export function LoginPage() {
     return (
@@ -11,7 +11,6 @@ export function LoginPage() {
             flexDirection: "column",
             backgroundColor: "#f0f2f5",
         }}>
-            {/* <Logo/> */}
             <img
                 style={
                     {
