@@ -2,12 +2,11 @@ import { createReducer } from "@reduxjs/toolkit";
 import { loginAction } from "../../state/actions/loginAction";
 
 const state = {
-    status: ["await"]
+    color: "white"
 }
-export const loginReducer = createReducer(state, (builder) => {
+const loginReducer = createReducer(state, (builder) => {
     builder.addCase(loginAction, (state, action) => {
-        console.log(action.payload);
-
+        return state.color = "red"
     })
 })
 

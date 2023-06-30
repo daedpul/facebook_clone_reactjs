@@ -3,11 +3,10 @@ import { combineReducers } from "redux";
 import { login, loginAction } from "../../state/actions/loginAction";
 import "../logincomponents/button.css";
 import { useSelector, useDispatch } from "react-redux";
-// import { loginReducer } from "../../state/reducer/loginReducer"
 
 function LoginButton() {
     const dispatch = useDispatch();
-    const state = useSelector((state) => state);
+    const state = useSelector((state) => state.color);
     return (
         <div
             style={{
@@ -24,7 +23,8 @@ function LoginButton() {
                     borderRadius: 5,
                     paddingLeft: "10px",
                     paddingRight: "10px",
-                    color: "#FFFFFF",
+                    // color: "#FFFFFF",
+                    // color: state.color,
                     backgroundColor: "#1877f2",
 
                 }} onClick={() => dispatch(loginAction())}>Log in</button>

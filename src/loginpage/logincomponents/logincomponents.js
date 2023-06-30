@@ -1,20 +1,19 @@
 import React, { Component } from "react";
-
 const colorPalette = {
     focusedBorder: "#1b74e4",
     unFocusedBorder: "#dddfe2",
     outlineColor: "#e7f3ff"
 }
 
-class Username extends React.Component {
+class Username extends Component {
     state = {
         borderColor: "#dddfe2",
         outlineColor: "#FFFFFF",
         textColor: "transparent"
     };
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
     render() {
         return (<div style={{
