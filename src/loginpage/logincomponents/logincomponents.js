@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 const colorPalette = {
     focusedBorder: "#1b74e4",
     unFocusedBorder: "#dddfe2",
