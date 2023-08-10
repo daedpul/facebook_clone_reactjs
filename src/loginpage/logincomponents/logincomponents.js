@@ -93,7 +93,7 @@ class Password extends Component {
                     paddingRight: "10px",
                     borderColor: this.state.borderColor,
                     outline: "2px solid",
-                    
+
                 }}
                 onFocus={() => this.setState({
                     borderColor: colorPalette.focusedBorder,

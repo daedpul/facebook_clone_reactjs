@@ -1,14 +1,14 @@
-import React from "react";
+import { React } from "react";
 import "../logincomponents/button.css";
 import { useDispatch, useSelector } from "react-redux";
-import { changeColor } from "../../redux/actions/loginAction";
+import { changeColor } from "..//action/loginAction"
 
 
 
 
 function LoginButton() {
     const dispatch = useDispatch()
-    const color = useSelector((state)=>state.login.color)
+    const color = useSelector((state) => state.login.color)
     return (
         <div
             style={{
@@ -25,9 +25,11 @@ function LoginButton() {
                     borderRadius: 5,
                     paddingLeft: "10px",
                     paddingRight: "10px",
-                    backgroundColor:color
+                    backgroundColor: color
+                }} onClick={() => {
+                    dispatch(changeColor())
 
-                }} onClick={()=>dispatch(changeColor())}>Log in</button>
+                }}>Log in</button>
         </div>
     );
 }
