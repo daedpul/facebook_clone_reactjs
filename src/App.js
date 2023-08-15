@@ -9,7 +9,7 @@ function App() {
       <Routes>
 
         <Route index element={<Login.LoginPage />} />
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );
