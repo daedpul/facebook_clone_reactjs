@@ -1,0 +1,20 @@
+.logoFadeIn {
+    height: 56px;
+    display: flex;
+    background-color: red;
+    align-items: start;
+    justify-content: start;
+    opacity: 0;
+    transform: translate3d(-50px, 0, 0);
+    /* ADDED - start x position as -50px */
+    cursor: pointer;
+    transition: 0.25s all ease-in-out;
+}
+
+.logoFadeOut {
+    height: 56px;
+    display: flex;
+    background-color: red;
+    align-items: start;
+    justify-content: start;
+}

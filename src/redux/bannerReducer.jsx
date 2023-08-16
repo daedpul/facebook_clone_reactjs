@@ -1,5 +1,5 @@
 import { createReducer } from "@reduxjs/toolkit";
-import { focusSearch, blurSearch } from "../homepage/banner/bannerAction";
+import { focusSearch, blurSearch } from "../homepage/banner/action/bannerAction";
 
 
 const initialState = {
@@ -9,13 +9,12 @@ const initialState = {
 const bannerReducer = createReducer(
     initialState, (builder) => {
         builder.addCase(focusSearch, (initialState, action) => {
-            console.log(action.payload)
+
             return {
                 ...initialState,
                 show: action.payload
             }
         }).addCase(blurSearch, (initialState, action) => {
-            console.log(action.payload)
             return {
                 ...initialState,
                 show: action.payload

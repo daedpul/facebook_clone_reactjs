@@ -1,3 +1,18 @@
-.searchField{
-    background-color: purple;
+.searchFieldShow{
+    height: 56px;
+    width: 244px;
+    align-items: center;
+    justify-content: start;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.searchFieldHide{
+    height: 56px;
+    width: 260px;
+    align-items: center;
+    justify-content: start;
+    transform: translateX(-20px);
+    opacity: 1;
+    pointer-events:none;
 }
