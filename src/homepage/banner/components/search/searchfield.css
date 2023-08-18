@@ -1,18 +1,16 @@
-.searchFieldShow{
+
+
+.searchField{
     height: 56px;
     width: 244px;
     align-items: center;
+    background-color: red;
     justify-content: start;
-    transition: opacity 0.5s;
-    opacity: 0;
-}
 
-.searchFieldHide{
-    height: 56px;
+}
+.searchField:focus-within{
+    background-color: green;
     width: 260px;
-    align-items: center;
-    justify-content: start;
-    transform: translateX(-20px);
-    opacity: 1;
-    pointer-events:none;
+    transform: translate3d(-16px,0,0);
+    transition: 0.2s all ease-in-out;
 }

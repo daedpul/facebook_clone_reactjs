@@ -1,12 +1,20 @@
 
 import AvatarLogo from "../../../../resource/fb_logo_avatar.png"
-import "./searchfield.css"
+
 import { useDispatch } from "react-redux"
 import { blurSearch, focusSearch } from "../../action/bannerAction"
 import { useSelector } from "react-redux/es/hooks/useSelector"
+import "./searchfield.css"
 import "./logoAnimation.css"
 
 function SearchComponent() {
+    // let show = useSelector(state => state.bannerReducer.show) || false
+    // var showReturn =()=>{
+    //     <img>
+
+    //     </img>
+    // }
+
     return (
         <div style={{
             display: "flex",
@@ -23,53 +31,49 @@ function SearchComponent() {
 }
 
 function LogoIcon() {
-    const show = useSelector(state => state.bannerReducer.show)
+    let show = useSelector(state => state.bannerReducer.show) || true
+
+
+    const ShowLogo =
+        <img className={show.show ? "logologoAvatar" : "logoAvatarHide"}
+
+            src={AvatarLogo} alt="facebookLogo" />
+
+    const ShowReturn = <img className={show.show ? "logologoAvatar" : "logoAvatarHide"}
+
+        src={AvatarLogo} alt="facebookLogo" />
+
     return (
-        <div
-            className={show ? "" : "searchFieldHide"}
-            style={{
-                height: '56px',
-                display: "flex",
-                backgroundColor: 'red',
-                alignItems: "start",
-                justifyContent: "start",
-            }}>
-            <img
-                style={{
-                    height: "40px",
-                    width: "40px",
-                    margin: "10px"
-                }}
-                src={AvatarLogo} alt="logo"/>
+        <div>
+            {ShowLogo}
+
         </div>)
 }
 
+
+
 function SearchField() {
-    const show = useSelector(state => state.bannerReducer.show)
+    let show = useSelector(state => state.bannerReducer.show) || false
 
     const dispatch = useDispatch()
     const onFocus = () => dispatch(focusSearch())
     const onBlur = () => dispatch(blurSearch())
-    // console.log(show ? "searchFieldShow" : "searchFieldHide")
-    console.log(show)
     return (
         <div
-
+            className={"searchField"}
             style={{
-                height: '56px',
-                display: "flex",
-                width: '244px',
                 alignItems: "center",
                 justifyContent: "start",
             }}>
             <input
-                className={show ? "searchFieldShow" : "searchFieldHide"}
                 style={{
+                    width: '260px',
+                    display: "flex",
                     border: "none",
                     outline: "none",
-                    backgroundColor: "green",
                     height: "40px",
-                }} onFocus={onFocus} onBlur={onBlur} />
+                }}
+                onFocus={onFocus} onBlur={onBlur} />
 
         </div>)
 }
